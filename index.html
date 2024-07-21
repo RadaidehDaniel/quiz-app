@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Frontend quiz app</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="header__topic-title">
+          <img src="" alt="" id="topic-img" />
+          <p id="topic-title"></p>
+        </div>
+        <div class="nav__theme">
+          <img src="./assets/images/icon-sun-dark.svg" alt="" id="sun-icon" />
+          <button id="theme-switch" class="theme-btn">
+            <div class="theme-btn-ball"></div>
+          </button>
+          <img src="./assets/images/icon-moon-dark.svg" alt="" id="moon-icon" />
+        </div>
+      </header>
+      <main>
+        <div id="section-loading" class="hidden">
+          <progress id="loading-bar" aria-label="Content loading…"></progress>
+        </div>
+        <div id="welcome-section">
+          <h1>Welcome to the <span>Frontend Quiz</span></h1>
+          <p>Pick a subject to get started.</p>
+        </div>
+        <div id="topics-section">
+          <button type="button" class="topic-button" id="HTML">
+            <img
+              src="./assets/images/icon-html.svg"
+              alt="HTML icon"
+              class="HTML-style"
+            />HTML
+          </button>
+          <button type="button" class="topic-button" id="CSS">
+            <img
+              src="./assets/images/icon-css.svg"
+              alt="HTML icon"
+              class="CSS-style"
+            />CSS
+          </button>
+          <button type="button" class="topic-button" id="JavaScript">
+            <img
+              src="./assets/images/icon-js.svg"
+              alt="HTML icon"
+              class="JavaScript-style"
+            />Javascript
+          </button>
+          <button type="button" class="topic-button" id="Accessibility">
+            <img
+              src="./assets/images/icon-accessibility.svg"
+              alt="HTML icon"
+              class="Accessibility-style"
+            />Accessibility
+          </button>
+        </div>
+        <div id="question-section" class="hidden">
+          <div>
+            <p class="counter-style">
+              Question <span id="question-counter">1</span> of 10
+            </p>
+            <p id="question-text">
+              Which of these color contrast ratios defines the minimum WCAG 2.1
+              Level AA requirement for normal text?
+            </p>
+          </div>
+
+          <progress id="progress-bar" max="100" value="100"></progress>
+        </div>
+        <form id="options-section" class="hidden">
+          <div>
+            <input type="radio" id="option-A" name="option" value="A" />
+            <label for="option-A"
+              ><span class="answer-order">A</span><span class="option-text">option</span
+              ><img src="" alt=""
+            /></label>
+          </div>
+          <div>
+            <input type="radio" id="option-B" name="option" value="B" />
+            <label for="option-B"
+              ><span class="answer-order">B</span><span class="option-text">option</span
+              ><img src="" alt=""
+            /></label>
+          </div>
+          <div>
+            <input type="radio" id="option-C" name="option" value="C" />
+            <label for="option-C"
+              ><span class="answer-order">C</span><span class="option-text">option</span
+              ><img src="" alt=""
+            /></label>
+          </div>
+          <div>
+            <input type="radio" id="option-D" name="option" value="D" />
+            <label for="option-D"
+              ><span class="answer-order">D</span><span class="option-text">option</span
+              ><img src="" alt=""
+            /></label>
+          </div>
+          <button type="submit" id="submit-button">Submit Answer</button>
+          <button type="button" id="next-button" class="hidden">
+            Next Question
+          </button>
+          <p id="error-msg" class="hidden">Please select an answer</p>
+        </form>
+        <div id="complete-section" class="hidden">
+          <p>Quiz completed <span>You scored...</span></p>
+        </div>
+        <div id="score-section" class="hidden">
+          <div>
+            <p>Accessibility</p>
+            <p id="socre-text">8</p>
+            <p class="out-of-style">out of 10</p>
+          </div>
+          <button type="reset" id="reset-button">Play Again</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
